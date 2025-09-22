@@ -8,11 +8,14 @@ on:
 
 permissions:
   contents: read
-  pages: write       # ✅ required for deploy-pages
-  id-token: write    # ✅ required for OIDC authentication
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
+    environment:
+      name: github-pages   # ✅ required for Pages deployments
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +27,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .   # or ./public, ./docs etc.
+          path: .   # adjust if files are in ./docs or ./public
 
       - name: Deploy to GitHub Pages
         id: deployment
