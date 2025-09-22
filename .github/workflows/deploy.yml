@@ -4,7 +4,12 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:   # ✅ allows manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write       # ✅ required for deploy-pages
+  id-token: write    # ✅ required for OIDC authentication
 
 jobs:
   deploy:
@@ -19,7 +24,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .   # ✅ upload all files in repo root
+          path: .   # or ./public, ./docs etc.
 
       - name: Deploy to GitHub Pages
         id: deployment
