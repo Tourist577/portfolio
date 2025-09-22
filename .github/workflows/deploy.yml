@@ -1,23 +1,26 @@
-name: Deploy to GitHub Pages
+name: Deploy static site to Pages
 
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+  workflow_dispatch:   # ✅ allows manual trigger
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3   # ✅ update to v3
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .   # ✅ upload all files in repo root
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4            # ✅ update to v4
+        uses: actions/deploy-pages@v4
