@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sandeep Chatterjee - Full Stack Developer Portfolio">
+    <meta name="keywords" content="Sandeep Chatterjee, Full Stack Developer, React, Node.js, JavaScript">
+    <title>Sandeep Chatterjee - Full Stack Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <canvas id="particles"></canvas>
+        <div class="gradient-orb orb1"></div>
+        <div class="gradient-orb orb2"></div>
+        <div class="gradient-orb orb3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">SC</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-folder"></i> Projects</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-extras">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-subtitle">Hello, I'm</span>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Sandeep Chatterjee</span>
+                    </h1>
+                    <p class="hero-description">
+                        A passionate <span class="highlight">Full Stack Developer</span> crafting 
+                        exceptional digital experiences with modern web technologies.
+                    </p>
+                    <div class="typing-wrapper">
+                        <span class="typing-text">I build </span>
+                        <span class="typing" id="typing-element"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="resume.pdf" download class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="30">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-decoration"></div>
+                        <img src="/sandeep1.png" alt="Sandeep Chatterjee" class="profile-image">
+                        <div class="floating-badge badge-1">React</div>
+                        <div class="floating-badge badge-2">Node.js</div>
+                        <div class="floating-badge badge-3">TypeScript</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who I Am</h3>
+                    <p>
+                        I'm a Full Stack Developer from <span class="highlight">Indore, India</span>, 
+                        with a passion for creating innovative web solutions. I specialize in React, 
+                        Node.js, and modern JavaScript, bringing ideas to life through clean, efficient code.
+                    </p>
+                    <p>
+                        My expertise extends to payment integration, SEO optimization, PWA development, 
+                        and creating responsive, user-friendly interfaces that deliver exceptional user experiences.
+                    </p>
+                    <div class="interests">
+                        <h4>Beyond Coding</h4>
+                        <ul class="interest-list">
+                            <li><i class="fas fa-gamepad"></i> Gaming Enthusiast</li>
+                            <li><i class="fas fa-pen"></i> Tech Blogger</li>
+                            <li><i class="fas fa-plane"></i> Travel Explorer</li>
+                            <li><i class="fas fa-film"></i> Movie Buff</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/about.png" alt="About Me">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            
+            <div class="skills-tabs">
+                <button class="tab-btn active" data-tab="frontend">Frontend</button>
+                <button class="tab-btn" data-tab="backend">Backend</button>
+                <button class="tab-btn" data-tab="tools">Tools</button>
+            </div>
+
+            <div class="skills-content">
+                <div class="tab-content active" id="frontend">
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-react skill-icon"></i>
+                            <h4>React</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-js skill-icon"></i>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-html5 skill-icon"></i>
+                            <h4>HTML5</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt skill-icon"></i>
+                            <h4>CSS3</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-code skill-icon"></i>
+                            <h4>TypeScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-atom skill-icon"></i>
+                            <h4>Redux</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="backend">
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-node-js skill-icon"></i>
+                            <h4>Node.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-server skill-icon"></i>
+                            <h4>Express.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-database skill-icon"></i>
+                            <h4>MongoDB</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-project-diagram skill-icon"></i>
+                            <h4>GraphQL</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="tools">
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-git-alt skill-icon"></i>
+                            <h4>Git</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-code-branch skill-icon"></i>
+                            <h4>VS Code</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-npm skill-icon"></i>
+                            <h4>NPM</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-terminal skill-icon"></i>
+                            <h4>Terminal</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-mail-bulk skill-icon"></i>
+                            <h4>Postman</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-linux skill-icon"></i>
+                            <h4>Linux</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="/airstudio.jpeg" alt="Airstudio">
+                        <div class="project-overlay">
+                            <a href="https://www.airstudio.info/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Airstudio</h3>
+                        <p>Premier platform for high volume photography studios with powerful scheduling features.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Django</span>
+                            <span>GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="/deskiva.png" alt="Deskiva">
+                        <div class="project-overlay">
+                            <a href="https://mmp.deskiva.net" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Deskiva</h3>
+                        <p>Efficient task management and communication solution for organizations.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="/waly.png" alt="Waly">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Waly - Credit Card Rewards</h3>
+                        <p>Chrome extension for maximizing credit card rewards and exclusive discounts.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Chrome API</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Let's create something amazing together</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities.</p>
+                    
+                    <div class="contact-items">
+                        <a href="mailto:sandeepchatterjee479@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>sandeepchatterjee479@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sandeep-chatterjee22/" target="_blank" class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/tourist9898" target="_blank" class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/tourist9898" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sandeep-chatterjee22/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:sandeepchatterjee479@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sandeep Chatterjee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
