@@ -421,6 +421,15 @@ body {
     background-clip: text;
 }
 
+.stat-plus {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .stat-label {
     color: var(--text-secondary);
     font-size: 0.9rem;
@@ -671,51 +680,39 @@ section {
     }
 }
 
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
+/* New Skills Section with Badges */
+.skill-category {
+    margin-bottom: 2rem;
 }
 
-.skill-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    transition: var(--transition);
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-.skill-icon {
-    font-size: 2.5rem;
-    color: var(--accent);
+.skill-category h4 {
     margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.skill-card h4 {
-    margin-bottom: 1rem;
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
-.skill-bar {
-    width: 100%;
-    height: 6px;
-    background: var(--glass-border);
-    border-radius: 3px;
-    overflow: hidden;
+.skill-badge {
+    padding: 0.5rem 1rem;
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px;
+    color: #a78bfa;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.skill-progress {
-    height: 100%;
-    background: var(--primary-gradient);
-    border-radius: 3px;
-    width: 0;
-    transition: width 1.5s ease;
+.skill-badge:hover {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.5);
+    transform: translateY(-2px);
 }
 
 /* Projects Section */
@@ -830,6 +827,19 @@ section {
     margin-bottom: 1.5rem;
 }
 
+.project-highlights {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.project-highlights li {
+    margin: 0.25rem 0;
+}
+
 .project-tech {
     display: flex;
     gap: 0.5rem;
@@ -865,6 +875,19 @@ section {
 .contact-info p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
+}
+
+.contact-cta {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-left: 3px solid var(--accent);
+    padding: 1rem;
+    margin: 1rem 0 1.5rem 0;
+    border-radius: 8px;
+}
+
+.contact-cta strong {
+    color: var(--text-primary);
+    font-size: 1.1rem;
 }
 
 .contact-items {
@@ -1032,5 +1055,18 @@ section {
     .btn {
         width: 100%;
         justify-content: center;
+    }
+    
+    .skill-badges {
+        gap: 0.5rem;
+    }
+    
+    .skill-badge {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .project-highlights {
+        font-size: 0.85rem;
     }
 }
